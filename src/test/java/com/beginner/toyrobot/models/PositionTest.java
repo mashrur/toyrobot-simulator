@@ -26,7 +26,8 @@ public class PositionTest {
         return Stream.of(
                 Arguments.of(3, 3, Direction.WEST,2,3, "decrease", "x"),
                 Arguments.of(3, 3, Direction.EAST,4,3, "increase", "X"),
-                Arguments.of(3, 3, Direction.NORTH,3,4, "increase", "y")
+                Arguments.of(3, 3, Direction.NORTH,3,4, "increase", "y"),
+                Arguments.of(2, 2, Direction.SOUTH,2,1, "decrease", "y")
         );
     }
 	

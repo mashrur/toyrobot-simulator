@@ -16,9 +16,6 @@ import com.beginner.toyrobot.models.Surface;
 import mockit.Deencapsulation;
 import mockit.Expectations;
 import mockit.Injectable;
-import mockit.Mock;
-import mockit.MockUp;
-import mockit.Verifications;
 import mockit.integration.junit4.JMockit;
 
 @RunWith(JMockit.class)
@@ -72,20 +69,6 @@ public class ToyRobotSimulatorTest {
 		
 		Position newPosition = Deencapsulation.getField(robot, "currentPosition");
 		assertEquals(currentPosition.getX(),xPos);
-	}
-	
-	public void showReportTest() {
-		ToyRobotSimulator robot = new ToyRobotSimulator();
-		currentPosition = new Position(5, 1, Direction.WEST);
-		Deencapsulation.setField(robot, "currentPosition",currentPosition);
-		Deencapsulation.setField(robot, "surface",surface);
-		try {
-			robot.executeCommand(RobotCommand.REPORT);
-		} catch (RobotException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 	}
 	
 	
